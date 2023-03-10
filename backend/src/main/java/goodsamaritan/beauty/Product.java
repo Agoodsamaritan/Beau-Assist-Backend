@@ -25,6 +25,8 @@ public class Product {
     private String description;
     private String product_type;
     private List<String> product_colors;
+//    private List<String> tag_list;
+
     @DocumentReference
     private List<Tag> tag_list;
 
