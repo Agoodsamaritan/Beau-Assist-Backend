@@ -23,4 +23,10 @@ public class ProductController {
     public ResponseEntity<Optional<Product>> getSingleProduct(@PathVariable int id) {
         return new ResponseEntity<Optional<Product>>(productService.singleProduct(id), HttpStatus.OK);
     }
+
+    @GetMapping("/type/{type}")
+    public ResponseEntity<List<Product>> getProductsByType(@PathVariable String type) {
+        List<Product> products = productService.getProductsByType(type);
+        return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+    }
 }

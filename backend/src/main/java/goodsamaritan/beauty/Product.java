@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
@@ -21,7 +22,8 @@ public class Product {
     private String price;
     private String image_link;
     private String description;
-    private String product_type;
+    @Field("product_type")
+    private String productType;
     private List<String> product_colors;
     private List<String> tag_list;
 }
