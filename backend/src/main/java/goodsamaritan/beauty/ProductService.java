@@ -14,10 +14,6 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public List<Product> getProductsByType(String type) {
-        return productRepository.findByProductType(type);
-    }
-
     public Optional<Product> singleProduct(int id) {
         return productRepository.findById(id);
     }

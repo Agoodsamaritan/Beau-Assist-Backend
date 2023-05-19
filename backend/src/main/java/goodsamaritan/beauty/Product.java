@@ -22,7 +22,6 @@ public class Product {
     private String price;
     private String image_link;
     private String description;
-    @Field("product_type")
     private String productType;
     private List<String> product_colors;
     private List<String> tag_list;
